@@ -4,8 +4,9 @@ import joblib
 
 # Load model and encoder
 try:
-    model = joblib.load("model.pkl")
-    le = joblib.load("label_encoder.pkl")
+    model = joblib.load("StreamlitApp/model.pkl")
+le = joblib.load("StreamlitApp/label_encoder.pkl")
+
 except Exception as e:
     st.error(f"❌ Error loading model or encoder: {e}")
     st.stop()
